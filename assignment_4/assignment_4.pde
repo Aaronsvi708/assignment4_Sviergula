@@ -1,12 +1,23 @@
 // assignment 4
 
+float playerX;
+float playerY;
+
+PImage player;
+
 void setup(){
   size(400,400);
+  
+  playerX = 140;
+  playerY = 290;
+  player = loadImage("player.png");
   
 }
 
 void draw(){
   background(200);
+  
+  
   
   Building();
   BuildingL();
@@ -17,6 +28,8 @@ void draw(){
   
   fill(180); // rooftop ledge
   rect(0,280,400,10);
+  
+  image(player,playerX,playerY,90,110);
 }
 
 void Building(){
