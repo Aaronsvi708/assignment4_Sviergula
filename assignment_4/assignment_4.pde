@@ -4,13 +4,19 @@ float playerX;
 float playerY;
 
 PImage player;
+PImage playerDefeated;
+PImage Zombie;
+PImage ZombieDefeated;
 
 void setup(){
   size(400,400);
   
-  playerX = 140;
-  playerY = 290;
+  playerX = 200;
+  playerY = 340;
   player = loadImage("player.png");
+  playerDefeated = loadImage("playerDefeated.png");
+  Zombie = loadImage("Zombie.png");
+  ZombieDefeated = loadImage("ZombieDefeated.png");
   
 }
 
@@ -29,7 +35,12 @@ void draw(){
   fill(180); // rooftop ledge
   rect(0,280,400,10);
   
+  imageMode(CENTER);
+  image(Zombie,200,40);
+  //image(ZombieDefeated,200,40);
   image(player,playerX,playerY,90,110);
+  //image(playerDefeated,205,350,150,140);
+ 
 }
 
 void Building(){
