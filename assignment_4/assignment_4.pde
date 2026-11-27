@@ -3,25 +3,25 @@
 float playerX;
 float playerY;
 
-PImage player;
-PImage playerDefeated;
-PImage Zombie;
-PImage ZombieDefeated;
+PImage player0;
+PImage player1;
+PImage Zombie0;
+PImage Zombie1;
 
 void setup(){
   size(400,400);
   
   playerX = 200;
   playerY = 340;
-  player = loadImage("player.png");
-  playerDefeated = loadImage("playerDefeated.png");
-  Zombie = loadImage("Zombie.png");
-  ZombieDefeated = loadImage("ZombieDefeated.png");
+  player0 = loadImage("player0.png");
+  player1 = loadImage("player1.png");
+  Zombie0 = loadImage("Zombie0.png");
+  Zombie1 = loadImage("Zombie1.png");
   
 }
 
 void draw(){
-  background(200);
+  background(98,84,155);
   
   
   
@@ -36,10 +36,12 @@ void draw(){
   rect(0,280,400,10);
   
   imageMode(CENTER);
-  image(Zombie,200,40);
-  //image(ZombieDefeated,200,40);
-  image(player,playerX,playerY,90,110);
-  //image(playerDefeated,205,350,150,140);
+  image(player0,200,340,90,110);
+  //image(player1,205,350,150,140);
+  image(Zombie0,200,50);
+  //image(Zombie1,200,50);
+  
+
  
 }
 
